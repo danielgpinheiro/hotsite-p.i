@@ -1,0 +1,9 @@
+@import 'reset';
+
+//Classes e seletores genéricos
+html, body { max-width: 1920px; margin: 0 auto;
+    @media all and (max-width: 997px) { -webkit-overflow-scrolling: touch; }
+}
+
+main { overflow: hidden; border: solid 1px red; }
+main, .wrapper, .transparent-img { width: 100%; display: block; }
