@@ -1,5 +1,5 @@
 $(function() {
-    FastClick.attach(document.body);
+    //FastClick.attach(document.body);
 });
 
 var currentSlide = 0;
@@ -297,7 +297,7 @@ $(document).ready(function(){
     }
 
     if(larguraTela <= 997) {
-        carousel();
+        //carousel();
         offset = -85;
 
         $("section.container-menu .content ul.menu").height($(window).height());
@@ -313,7 +313,7 @@ $(document).ready(function(){
     if(larguraTela <= 997)
         thumbBoo = "none";
 
-    $('.player').royalSlider({
+    /*$('.player').royalSlider({
         arrowsNav: false,
         loop: loopBoo,
         controlsInside: true,
@@ -369,7 +369,7 @@ $(document).ready(function(){
         duration: 1300,
         easing: "easeInOutExpo",
         hash: true,
-    });
+    });*/
 
     $('section.container-player-computer ul.tabs li a').click(function(e){
         e.preventDefault();
