@@ -1,8 +1,8 @@
 @import 'reset'; //Classes e seletores genéricos
 $AcentBackgroundColor: #AEEA00;
 $AcentBorderColor: #AEEA00;
-$AcentHoverBackgroundColor: #C6FF00;
-$ShadowOfBox: #212121;
+$AcentHoverBackgroundColor: #eeff41;
+$ShadowOfBox:  rgba(33, 33, 33, 0.44);
 
 $PrimaryColor: #C0CA33;
 
@@ -25,7 +25,7 @@ main {
 }
 
 header {
-    background: url('../img/cook-thing.jpg') no-repeat center center fixed; background-size: cover;
+    background: url('../img/cook-thing-min.jpg') no-repeat center center fixed; background-size: cover;
     display: flex; flex-flow: column wrap; justify-content: space-around;
     height: 100vh; padding: 2.2em .3em;
     h1, h2, h3, h4 {
@@ -35,15 +35,24 @@ header {
     button, a { margin: 2em .6em; }
 }
 
-section { padding: .2em; font-size: 1.27em; div { padding: inherit; }
-  .card { max-width: 1000px; margin: 10px auto; h4 { margin:0; padding: 10px 20px;}} }
+section {
+  display: flex; flex-flow: column; font-size: 1.27em;
+  h4, p { margin: .5em auto .1em; }
+  .two-columns, .one-column { display: flex;  padding: 4.375em 0 5.375em 0;}
+  .two-columns { 
+    flex: 1 1 50%; flex-flow: row; justify-content: space-around;
+    .left { align-self: center; }
+    .right { display: flex; img { align-self: flex-start;  height: 480px; } }
+    border-bottom: 1px solid rgba(33, 33, 33, 0.44);
+  }
+  .one-column { flex-flow: column; justify-content: center; }
+}
 
 button.button, a.button {
-  align-self: center;
-  cursor: pointer;
-  border-radius: 23px; padding: .6em 1.3em .5em;
-  box-shadow: 1px 1px 1px 0px $ShadowOfBox, 0px 1px 6px 1px $ShadowOfBox;
-  font-size: 1.3em; font-weight: 600; text-align: center;
+  align-self: center; cursor: pointer;
+  border-radius: 50px; padding: .8em 2em .79em;
+  box-shadow: 1px 1px 4px 0px $ShadowOfBox, 0px 1px 8px 1px $ShadowOfBox;
+  font-size: 1.4em; font-weight: bold; text-align: center;
   transition: all 0.5s;
 }
 button.button.acent-button, a.button.acent-button {
@@ -51,7 +60,7 @@ button.button.acent-button, a.button.acent-button {
 }
 button.button.acent-button:hover, a.button.acent-button:hover {
   background: $AcentHoverBackgroundColor;
-  box-shadow: 1px 1px 3px 0px $ShadowOfBox, 0px 3px 8px 1px $ShadowOfBox;
+  box-shadow: 1px 1px 3px 0px $ShadowOfBox, 0px 3px 10px 1px $ShadowOfBox;
 }
 button.button.acent-button:active, a.button.acent-button:active {
   background: $AcentHoverBackgroundColor;
@@ -63,13 +72,7 @@ button.button.acent-button:focus, a.button.acent-button:focus {
 }
 
 footer {
-  background: $PrimaryColor;
-  display: flex;
-  min-height: 4em;
-  justify-content: flex-end;
-  p {
-    color: #FFF;
-    font-size: 1.2em;
-    padding: 1.2em;
-  }
+  position: relative;
+  background: $PrimaryColor; display: flex; min-height: 4em; justify-content: flex-end;
+  p { color: #FFF; font-size: 1.2em; padding: 1.2em; }
 }
