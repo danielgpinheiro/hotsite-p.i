@@ -1,0 +1,22 @@
+button.button, a.button {
+  align-self: center; cursor: pointer;
+  border-radius: 50px; padding: .8em 2em .79em;
+  box-shadow: 1px 1px 4px 0px $ShadowOfBox, 0px 1px 8px 1px $ShadowOfBox;
+  font-size: 1.4em; font-weight: bold; text-align: center;
+  transition: all 0.5s;
+}
+button.button.acent-button, a.button.acent-button {
+  color: #FFF; background: $PrimaryColor;
+}
+button.button.acent-button:hover, a.button.acent-button:hover {
+  background: $AcentHoverBackgroundColor;
+  box-shadow: 1px 1px 3px 0px $ShadowOfBox, 0px 3px 10px 1px $ShadowOfBox;
+}
+button.button.acent-button:active, a.button.acent-button:active {
+  background: $AcentHoverBackgroundColor;
+  box-shadow: 1px 1px 3px 0px $ShadowOfBox, 0px 3px 8px 1px $ShadowOfBox;
+}
+button.button.acent-button:focus, a.button.acent-button:focus {
+  background: $AcentHoverBackgroundColor;
+  box-shadow: 1px 1px 3px 0px $ShadowOfBox, 0px 3px 8px 1px $ShadowOfBox;
+}
